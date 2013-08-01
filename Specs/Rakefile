@@ -87,7 +87,7 @@ end
 desc "Build Specs OCUnit application specs"
 task :build_Specs => :clean_Specs do
   Specs.kill_simulator
-  Specs.system_or_exit "pushd #{Specs::PROJECT_ROOT} && xcodebuild -target iToDo -configuration #{Specs::CONFIGURATION} -sdk iphonesimulator#{Specs.deployment_target_sdk_version} build TEST_AFTER_BUILD=NO SYMROOT='#{Specs::BUILD_DIR}' && popd", Specs.output_file("Specs-AppBuild")
+  Specs.system_or_exit "pushd #{Specs::PROJECT_ROOT} && xcodebuild -target App -configuration #{Specs::CONFIGURATION} -sdk iphonesimulator#{Specs.deployment_target_sdk_version} build TEST_AFTER_BUILD=NO SYMROOT='#{Specs::BUILD_DIR}' && popd", Specs.output_file("Specs-AppBuild")
   Specs.system_or_exit "pushd #{Specs::PROJECT_ROOT} && xcodebuild -target #{Specs::UI_SPECS_TARGET_NAME} -configuration #{Specs::CONFIGURATION} -sdk iphonesimulator#{Specs.deployment_target_sdk_version} build TEST_AFTER_BUILD=NO SYMROOT='#{Specs::BUILD_DIR}' && popd", Specs.output_file("Specs-SpecBuild")
 end
 
@@ -98,7 +98,7 @@ task :Specs => :build_Specs do
     "DYLD_INSERT_LIBRARIES" => "#{Specs.xcode_developer_dir}/Library/PrivateFrameworks/IDEBundleInjection.framework/IDEBundleInjection",
     "DYLD_FALLBACK_LIBRARY_PATH" => Specs.deployment_target_sdk_dir,
     "XCInjectBundle" => "#{File.join(Specs.build_dir("-iphonesimulator"), "#{Specs::UI_SPECS_TARGET_NAME}.octest")}",
-    "XCInjectBundleInto" => "#{File.join(Specs.build_dir("-iphonesimulator"), "iToDo.app/iToDo")}",
+    "XCInjectBundleInto" => "#{File.join(Specs.build_dir("-iphonesimulator"), "App.app/App")}",
     "IPHONE_SIMULATOR_ROOT" => Specs.deployment_target_sdk_dir,
     "CFFIXED_USER_HOME" => Dir.tmpdir,
     "CEDAR_HEADLESS_SPECS" => "1",
@@ -106,7 +106,7 @@ task :Specs => :build_Specs do
   }
 
   Specs.with_env_vars(env_vars) do
-    Specs.system_or_exit "#{File.join(Specs.build_dir("-iphonesimulator"), "iToDo.app/iToDo")} -RegisterForSystemEvents -SenTest All";
+    Specs.system_or_exit "#{File.join(Specs.build_dir("-iphonesimulator"), "App.app/App")} -RegisterForSystemEvents -SenTest All";
   end
 end
 

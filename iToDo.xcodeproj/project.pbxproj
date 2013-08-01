@@ -41,7 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		584E935817AA2276005E1254 /* iToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		584E935817AA2276005E1254 /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		584E935B17AA2276005E1254 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		584E935D17AA2276005E1254 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		584E935F17AA2276005E1254 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -111,8 +111,8 @@
 		584E934F17AA2276005E1254 = {
 			isa = PBXGroup;
 			children = (
+				584E936117AA2276005E1254 /* App */,
 				58C96AC017AA268F00DFB864 /* Features */,
-				584E936117AA2276005E1254 /* iToDo */,
 				584E937F17AA2276005E1254 /* Tests */,
 				584E939A17AA2342005E1254 /* Specs */,
 				584E935A17AA2276005E1254 /* Frameworks */,
@@ -123,7 +123,7 @@
 		584E935917AA2276005E1254 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				584E935817AA2276005E1254 /* iToDo.app */,
+				584E935817AA2276005E1254 /* App.app */,
 				584E937817AA2276005E1254 /* Tests.octest */,
 				584E939517AA2342005E1254 /* Specs.octest */,
 			);
@@ -141,14 +141,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		584E936117AA2276005E1254 /* iToDo */ = {
+		584E936117AA2276005E1254 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				584E936A17AA2276005E1254 /* ITDAppDelegate.h */,
 				584E936B17AA2276005E1254 /* ITDAppDelegate.m */,
 				584E936217AA2276005E1254 /* Supporting Files */,
 			);
-			path = iToDo;
+			path = App;
 			sourceTree = "<group>";
 		};
 		584E936217AA2276005E1254 /* Supporting Files */ = {
@@ -235,9 +235,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		584E935717AA2276005E1254 /* iToDo */ = {
+		584E935717AA2276005E1254 /* App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 584E938A17AA2277005E1254 /* Build configuration list for PBXNativeTarget "iToDo" */;
+			buildConfigurationList = 584E938A17AA2277005E1254 /* Build configuration list for PBXNativeTarget "App" */;
 			buildPhases = (
 				584E935417AA2276005E1254 /* Sources */,
 				584E935517AA2276005E1254 /* Frameworks */,
@@ -247,9 +247,9 @@
 			);
 			dependencies = (
 			);
-			name = iToDo;
+			name = App;
 			productName = iToDo;
-			productReference = 584E935817AA2276005E1254 /* iToDo.app */;
+			productReference = 584E935817AA2276005E1254 /* App.app */;
 			productType = "com.apple.product-type.application";
 		};
 		584E937717AA2276005E1254 /* Tests */ = {
@@ -311,7 +311,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				584E935717AA2276005E1254 /* iToDo */,
+				584E935717AA2276005E1254 /* App */,
 				584E937717AA2276005E1254 /* Tests */,
 				584E939417AA2342005E1254 /* Specs */,
 			);
@@ -408,7 +408,7 @@
 /* Begin PBXTargetDependency section */
 		584E937E17AA2276005E1254 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 584E935717AA2276005E1254 /* iToDo */;
+			target = 584E935717AA2276005E1254 /* App */;
 			targetProxy = 584E937D17AA2276005E1254 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -503,8 +503,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iToDo/iToDo-Prefix.pch";
-				INFOPLIST_FILE = "iToDo/iToDo-Info.plist";
+				GCC_PREFIX_HEADER = "App/iToDo-Prefix.pch";
+				INFOPLIST_FILE = "App/iToDo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRANK_LIBRARY_SEARCH_PATHS)",
@@ -522,8 +522,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iToDo/iToDo-Prefix.pch";
-				INFOPLIST_FILE = "iToDo/iToDo-Info.plist";
+				GCC_PREFIX_HEADER = "App/iToDo-Prefix.pch";
+				INFOPLIST_FILE = "App/iToDo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -532,13 +532,13 @@
 		584E938E17AA2277005E1254 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iToDo.app/iToDo";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iToDo/iToDo-Prefix.pch";
+				GCC_PREFIX_HEADER = "App/iToDo-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -549,13 +549,13 @@
 		584E938F17AA2277005E1254 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iToDo.app/iToDo";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "iToDo/iToDo-Prefix.pch";
+				GCC_PREFIX_HEADER = "App/iToDo-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
@@ -566,7 +566,7 @@
 		584E93A717AA2344005E1254 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iToDo.app/iToDo";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
@@ -589,7 +589,7 @@
 		584E93A817AA2344005E1254 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iToDo.app/iToDo";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
@@ -621,7 +621,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		584E938A17AA2277005E1254 /* Build configuration list for PBXNativeTarget "iToDo" */ = {
+		584E938A17AA2277005E1254 /* Build configuration list for PBXNativeTarget "App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				584E938B17AA2277005E1254 /* Debug */,
