@@ -54,9 +54,9 @@
 		584E936D17AA2276005E1254 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		584E936F17AA2276005E1254 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		584E937117AA2276005E1254 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		584E937817AA2276005E1254 /* iToDoTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iToDoTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		584E937817AA2276005E1254 /* Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		584E937917AA2276005E1254 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		584E938117AA2277005E1254 /* iToDoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iToDoTests-Info.plist"; sourceTree = "<group>"; };
+		584E938117AA2277005E1254 /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		584E938317AA2277005E1254 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		584E938517AA2277005E1254 /* iToDoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iToDoTests.h; sourceTree = "<group>"; };
 		584E938617AA2277005E1254 /* iToDoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iToDoTests.m; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 			children = (
 				58C96AC017AA268F00DFB864 /* Features */,
 				584E936117AA2276005E1254 /* iToDo */,
-				584E937F17AA2276005E1254 /* iToDoTests */,
+				584E937F17AA2276005E1254 /* Tests */,
 				584E939A17AA2342005E1254 /* Specs */,
 				584E935A17AA2276005E1254 /* Frameworks */,
 				584E935917AA2276005E1254 /* Products */,
@@ -124,7 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				584E935817AA2276005E1254 /* iToDo.app */,
-				584E937817AA2276005E1254 /* iToDoTests.octest */,
+				584E937817AA2276005E1254 /* Tests.octest */,
 				584E939517AA2342005E1254 /* Specs.octest */,
 			);
 			name = Products;
@@ -165,20 +165,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		584E937F17AA2276005E1254 /* iToDoTests */ = {
+		584E937F17AA2276005E1254 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				584E938517AA2277005E1254 /* iToDoTests.h */,
 				584E938617AA2277005E1254 /* iToDoTests.m */,
 				584E938017AA2277005E1254 /* Supporting Files */,
 			);
-			path = iToDoTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		584E938017AA2277005E1254 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				584E938117AA2277005E1254 /* iToDoTests-Info.plist */,
+				584E938117AA2277005E1254 /* Tests-Info.plist */,
 				584E938217AA2277005E1254 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -252,9 +252,9 @@
 			productReference = 584E935817AA2276005E1254 /* iToDo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		584E937717AA2276005E1254 /* iToDoTests */ = {
+		584E937717AA2276005E1254 /* Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 584E938D17AA2277005E1254 /* Build configuration list for PBXNativeTarget "iToDoTests" */;
+			buildConfigurationList = 584E938D17AA2277005E1254 /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
 				584E937317AA2276005E1254 /* Sources */,
 				584E937417AA2276005E1254 /* Frameworks */,
@@ -266,9 +266,9 @@
 			dependencies = (
 				584E937E17AA2276005E1254 /* PBXTargetDependency */,
 			);
-			name = iToDoTests;
+			name = Tests;
 			productName = iToDoTests;
-			productReference = 584E937817AA2276005E1254 /* iToDoTests.octest */;
+			productReference = 584E937817AA2276005E1254 /* Tests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 		584E939417AA2342005E1254 /* Specs */ = {
@@ -312,7 +312,7 @@
 			projectRoot = "";
 			targets = (
 				584E935717AA2276005E1254 /* iToDo */,
-				584E937717AA2276005E1254 /* iToDoTests */,
+				584E937717AA2276005E1254 /* Tests */,
 				584E939417AA2342005E1254 /* Specs */,
 			);
 		};
@@ -539,7 +539,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iToDo/iToDo-Prefix.pch";
-				INFOPLIST_FILE = "iToDoTests/iToDoTests-Info.plist";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -556,7 +556,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iToDo/iToDo-Prefix.pch";
-				INFOPLIST_FILE = "iToDoTests/iToDoTests-Info.plist";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -630,7 +630,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		584E938D17AA2277005E1254 /* Build configuration list for PBXNativeTarget "iToDoTests" */ = {
+		584E938D17AA2277005E1254 /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				584E938E17AA2277005E1254 /* Debug */,
