@@ -67,6 +67,9 @@
 		584E93A217AA2342005E1254 /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
 		584E93A317AA2344005E1254 /* Cedar-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iOS.framework"; path = "Frameworks/Cedar-iOS.framework"; sourceTree = "<group>"; };
 		584E93A517AA2344005E1254 /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
+		58C96AC117AA270300DFB864 /* my_first.feature */ = {isa = PBXFileReference; lastKnownFileType = text; path = my_first.feature; sourceTree = "<group>"; };
+		58C96AC317AA270300DFB864 /* launch_steps.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = launch_steps.rb; sourceTree = "<group>"; };
+		58C96AC517AA270300DFB864 /* env.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = env.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,7 @@
 		584E934F17AA2276005E1254 = {
 			isa = PBXGroup;
 			children = (
+				58C96AC017AA268F00DFB864 /* Features */,
 				584E936117AA2276005E1254 /* iToDo */,
 				584E937F17AA2276005E1254 /* iToDoTests */,
 				584E939A17AA2342005E1254 /* Specs */,
@@ -199,6 +203,33 @@
 				584E93A517AA2344005E1254 /* Specs-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		58C96AC017AA268F00DFB864 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				58C96AC117AA270300DFB864 /* my_first.feature */,
+				58C96AC217AA270300DFB864 /* step_definitions */,
+				58C96AC417AA270300DFB864 /* support */,
+			);
+			name = Features;
+			path = Frank/features;
+			sourceTree = "<group>";
+		};
+		58C96AC217AA270300DFB864 /* step_definitions */ = {
+			isa = PBXGroup;
+			children = (
+				58C96AC317AA270300DFB864 /* launch_steps.rb */,
+			);
+			path = step_definitions;
+			sourceTree = "<group>";
+		};
+		58C96AC417AA270300DFB864 /* support */ = {
+			isa = PBXGroup;
+			children = (
+				58C96AC517AA270300DFB864 /* env.rb */,
+			);
+			path = support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -474,6 +505,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iToDo/iToDo-Prefix.pch";
 				INFOPLIST_FILE = "iToDo/iToDo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRANK_LIBRARY_SEARCH_PATHS)",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(FRANK_LDFLAGS)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -589,6 +628,7 @@
 				584E938C17AA2277005E1254 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		584E938D17AA2277005E1254 /* Build configuration list for PBXNativeTarget "iToDoTests" */ = {
 			isa = XCConfigurationList;
@@ -597,6 +637,7 @@
 				584E938F17AA2277005E1254 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		584E93A617AA2344005E1254 /* Build configuration list for PBXNativeTarget "Specs" */ = {
 			isa = XCConfigurationList;
@@ -605,6 +646,7 @@
 				584E93A817AA2344005E1254 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
