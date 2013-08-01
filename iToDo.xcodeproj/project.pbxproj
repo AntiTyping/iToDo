@@ -21,6 +21,13 @@
 		584E937C17AA2276005E1254 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584E935D17AA2276005E1254 /* Foundation.framework */; };
 		584E938417AA2277005E1254 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 584E938217AA2277005E1254 /* InfoPlist.strings */; };
 		584E938717AA2277005E1254 /* iToDoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 584E938617AA2277005E1254 /* iToDoTests.m */; };
+		584E939617AA2342005E1254 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584E937917AA2276005E1254 /* SenTestingKit.framework */; };
+		584E939717AA2342005E1254 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584E935F17AA2276005E1254 /* CoreGraphics.framework */; };
+		584E939817AA2342005E1254 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584E935B17AA2276005E1254 /* UIKit.framework */; };
+		584E939917AA2342005E1254 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584E935D17AA2276005E1254 /* Foundation.framework */; };
+		584E939F17AA2342005E1254 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 584E939D17AA2342005E1254 /* InfoPlist.strings */; };
+		584E93A117AA2342005E1254 /* ExampleSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 584E93A017AA2342005E1254 /* ExampleSpec.mm */; };
+		584E93A417AA2344005E1254 /* Cedar-iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584E93A317AA2344005E1254 /* Cedar-iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +60,13 @@
 		584E938317AA2277005E1254 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		584E938517AA2277005E1254 /* iToDoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iToDoTests.h; sourceTree = "<group>"; };
 		584E938617AA2277005E1254 /* iToDoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iToDoTests.m; sourceTree = "<group>"; };
+		584E939517AA2342005E1254 /* Specs.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		584E939C17AA2342005E1254 /* Specs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
+		584E939E17AA2342005E1254 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		584E93A017AA2342005E1254 /* ExampleSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ExampleSpec.mm; sourceTree = "<group>"; };
+		584E93A217AA2342005E1254 /* Rakefile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Rakefile; sourceTree = "<group>"; };
+		584E93A317AA2344005E1254 /* Cedar-iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Cedar-iOS.framework"; path = "Frameworks/Cedar-iOS.framework"; sourceTree = "<group>"; };
+		584E93A517AA2344005E1254 /* Specs-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Specs-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +90,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		584E939117AA2342005E1254 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				584E939617AA2342005E1254 /* SenTestingKit.framework in Frameworks */,
+				584E939717AA2342005E1254 /* CoreGraphics.framework in Frameworks */,
+				584E939817AA2342005E1254 /* UIKit.framework in Frameworks */,
+				584E939917AA2342005E1254 /* Foundation.framework in Frameworks */,
+				584E93A417AA2344005E1254 /* Cedar-iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -84,6 +110,7 @@
 			children = (
 				584E936117AA2276005E1254 /* iToDo */,
 				584E937F17AA2276005E1254 /* iToDoTests */,
+				584E939A17AA2342005E1254 /* Specs */,
 				584E935A17AA2276005E1254 /* Frameworks */,
 				584E935917AA2276005E1254 /* Products */,
 			);
@@ -94,6 +121,7 @@
 			children = (
 				584E935817AA2276005E1254 /* iToDo.app */,
 				584E937817AA2276005E1254 /* iToDoTests.octest */,
+				584E939517AA2342005E1254 /* Specs.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,6 +180,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		584E939A17AA2342005E1254 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				584E93A017AA2342005E1254 /* ExampleSpec.mm */,
+				584E93A217AA2342005E1254 /* Rakefile */,
+				584E93A317AA2344005E1254 /* Cedar-iOS.framework */,
+				584E939B17AA2342005E1254 /* Supporting Files */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		584E939B17AA2342005E1254 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				584E939C17AA2342005E1254 /* Specs-Info.plist */,
+				584E939D17AA2342005E1254 /* InfoPlist.strings */,
+				584E93A517AA2344005E1254 /* Specs-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,6 +240,24 @@
 			productReference = 584E937817AA2276005E1254 /* iToDoTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
+		584E939417AA2342005E1254 /* Specs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 584E93A617AA2344005E1254 /* Build configuration list for PBXNativeTarget "Specs" */;
+			buildPhases = (
+				584E939017AA2342005E1254 /* Sources */,
+				584E939117AA2342005E1254 /* Frameworks */,
+				584E939217AA2342005E1254 /* Resources */,
+				584E939317AA2342005E1254 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Specs;
+			productName = Specs;
+			productReference = 584E939517AA2342005E1254 /* Specs.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -215,6 +282,7 @@
 			targets = (
 				584E935717AA2276005E1254 /* iToDo */,
 				584E937717AA2276005E1254 /* iToDoTests */,
+				584E939417AA2342005E1254 /* Specs */,
 			);
 		};
 /* End PBXProject section */
@@ -239,10 +307,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		584E939217AA2342005E1254 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				584E939F17AA2342005E1254 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		584E937617AA2276005E1254 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		584E939317AA2342005E1254 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -275,6 +364,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		584E939017AA2342005E1254 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				584E93A117AA2342005E1254 /* ExampleSpec.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -298,6 +395,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				584E938317AA2277005E1254 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		584E939D17AA2342005E1254 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				584E939E17AA2342005E1254 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -419,6 +524,52 @@
 			};
 			name = Release;
 		};
+		584E93A717AA2344005E1254 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iToDo.app/iToDo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)/Specs/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				INFOPLIST_FILE = "Specs/Specs-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		584E93A817AA2344005E1254 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iToDo.app/iToDo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)/Specs/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Specs/Specs-Prefix.pch";
+				INFOPLIST_FILE = "Specs/Specs-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -444,6 +595,14 @@
 			buildConfigurations = (
 				584E938E17AA2277005E1254 /* Debug */,
 				584E938F17AA2277005E1254 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		584E93A617AA2344005E1254 /* Build configuration list for PBXNativeTarget "Specs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				584E93A717AA2344005E1254 /* Debug */,
+				584E93A817AA2344005E1254 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
